@@ -20,13 +20,22 @@
       {
         "command": "vs.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command": "vs.goToDefinition",
+        "title": "Go to Definition"
       }
     ],
     "keybindings": [
       {
-        "command": "vs.middleClick",
+        "command": "vs.goToDefinition",
         "key": "mouse3",
         "mac": "mouse3"
+      },
+      {
+        "command": "vs.helloWorld",
+        "key": "cmd+alt+z",
+        "mac": "cmd+alt+z"
       }
     ]
   },
