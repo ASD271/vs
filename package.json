@@ -14,10 +14,6 @@
   "contributes": {
     "commands": [
       {
-        "command": "vs.middleClick",
-        "title": "Middle Click (Command+Click)"
-      },
-      {
         "command": "vs.helloWorld",
         "title": "Hello World"
       },
@@ -27,11 +23,6 @@
       }
     ],
     "keybindings": [
-      {
-        "command": "vs.goToDefinition",
-        "key": "mouse3",
-        "mac": "mouse3"
-      },
       {
         "command": "vs.helloWorld",
         "key": "cmd+alt+z",
