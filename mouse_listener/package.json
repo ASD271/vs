@@ -1,0 +1,14 @@
+{
+  "name": "mouse_listener",
+  "version": "0.1.0",
+  "description": "",
+  "main": "lib/index.js",
+  "author": "x",
+  "license": "MIT",
+  "dependencies": {
+    "neon-cli": "^0.9.1"
+  },
+  "scripts": {
+    "install": "neon build"
+  }
+}
