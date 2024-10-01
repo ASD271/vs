@@ -26,8 +26,7 @@ pub fn listen_mouse(mut cx: FunctionContext) -> JsResult<JsUndefined> {
                 tx_clone.send(message).unwrap();
             });
             loop {
-                thread::sleep(Duration::from_secs(3));
-                tx.send("hello").unwrap()
+                thread::sleep(Duration::from_secs(1000));// 无限循环，防止程序直接结束
             }
         }
     });

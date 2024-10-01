@@ -1,0 +1,20 @@
+[package]
+name = "mouse_listener"
+version = "0.1.0"
+authors = ["shijianghao <shijianghao@meituan.com>"]
+license = "MIT"
+edition = "2018"
+exclude = ["index.node"]
+
+[lib]
+name = "mouse_listener"
+crate-type = ["cdylib"]
+
+[[bin]]
+name = "test_bin"
+path = "src/main.rs"
+
+[dependencies]
+neon = "1.1.0-alpha.0"
+device_query = "2.1.0"
+log = "0.4.22"
