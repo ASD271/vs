@@ -1,8 +1,7 @@
-var addon = require('../native');
+const native = require('../native');
 
-// console.log(addon.hello());
 module.exports = {
-    hello: addon.hello,
-    parseAsync: addon.parseAsync,
-    listenMouse:addon.listenMouse
+    hello: native.hello,
+    parseAsync: native.parseAsync,
+    listenMouse:native.listenMouse
 };
