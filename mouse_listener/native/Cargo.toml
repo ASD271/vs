@@ -18,3 +18,4 @@ path = "src/main.rs"
 neon = "1.1.0-alpha.0"
 device_query = "2.1.0"
 log = "0.4.22"
+tokio = { version = "1.0.3", features = ["full"] }

@@ -36,20 +36,12 @@ pub fn listen_mouse(mut cx: FunctionContext) -> JsResult<JsUndefined> {
         let callback = callback.into_inner(&mut cx);
 
         for r in rx {
-            // println!("{}",r);
             let args = vec![
                 cx.null().upcast::<JsValue>(),
                 cx.string(r).upcast::<JsValue>(),
             ];
             callback.call(&mut cx, this, args)?;
         }
-        // while let Ok(msg) = rx.recv() {
-        //     let args = vec![
-        //         cx.null().upcast::<JsValue>(),
-        //         cx.string(msg).upcast::<JsValue>(),
-        //     ];
-        //     callback.call(&mut cx, this, args)?;
-        // }
         Ok(())
     });
 
