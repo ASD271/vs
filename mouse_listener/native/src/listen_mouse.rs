@@ -20,13 +20,13 @@ pub fn listen_mouse(mut cx: FunctionContext) -> JsResult<JsUndefined> {
                     1 => "left",
                     2 => "right",
                     3 => "middle",
-                    _ => return, // 对于其他按钮值，我们直接返回不发送消息
+                    _ => return
                 };
 
                 tx_clone.send(message).unwrap();
             });
             loop {
-                thread::sleep(Duration::from_secs(1000));// 无限循环，防止程序直接结束
+                thread::sleep(Duration::from_secs(1000)); //prevents the program from ending prematurely
             }
         }
     });

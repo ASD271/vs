@@ -2,7 +2,13 @@ import * as vscode from 'vscode';
 import { listenMouse } from 'mouse_listener';
 
 let mouseListener: any = null;
-
+// mouseListener = listenMouse((error, result) => {
+// 	if(error){
+// 		console.error('鼠标监听错误:', error);
+// 		return;
+// 	}
+// 	vscode.window.showInformationMessage(result);
+// });
 export function activate(context: vscode.ExtensionContext) {
     const helloWorldDisposable = vscode.commands.registerCommand('vs.helloWorld', () => {
         vscode.window.showInformationMessage('Hello World from vs extension test10!');
@@ -31,7 +37,10 @@ export function activate(context: vscode.ExtensionContext) {
     // 添加鼠标监听
     try {
         mouseListener = listenMouse((error, result) => {
-            vscode.window.showInformationMessage(result);
+			vscode.window.showInformationMessage(result);
+			if (result === 'middle') {
+				vscode.commands.executeCommand('vs.goToDefinition');
+			}
         });
     } catch (error) {
         console.error('启动鼠标监听失败:', error);
